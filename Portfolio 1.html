@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="charset" content="UTF-8">
+        <meta name="author" content="Ritoboy">
+        <meta name="keyword" content="html, css, Javascript, Portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio</title>
+        <!--<meta http-equiv="refresh" content="30">-->
+        <link rel="stylesheet" href="Portfolio 1.css">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+<!--0C9 is for navicon | &#xf00d for prenext-->
+
+        <!--HEADER FOR BIG SCREEN-->
+        <div class="header">
+            <!--<div class="navicon-container">
+                <div class="navicon">
+                    <i class="fa" style="font-size: 30px;
+                    display: inline-block;">&#xf0C9</i>
+                </div>
+                <div class="navicon-content">
+                        <a href="#">Curriculum Vitae</a>
+                        <a href="#">Web development</a>
+                        <a href="#">Graphics design</a>
+                </div>
+            </div>-->
+            <div id="username">Ritoboy_dev <span> || My Portfolio </span></div>
+
+            <div class="top-contact-container">
+              
+            <a href="https://github.com/Ritoboy" target="_blank">
+                <i class="fa" style="color:black;">&#xf09b</i>
+                <span class="contact-link">Github</span>
+            </a>
+            <a href="mailto:ritoboy4@gmail.com" target="_blank">
+                <i class="fa" style="color: black;">&#xf2b6</i>
+                <span class="contact-link">Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/oladimeji-emmanuel-0994b6235" 
+                target="_blank">
+                <i class="fa" style="color: rgb(4, 0, 255);">&#xf08c</i>
+                <span class="contact-link">LinkedIn</span>
+            </a>
+            <a href="https://wa.link/mpvn7l" target="_blank">
+                <i class="fa" style="color: rgb(1, 109, 33);">&#xf232</i>
+                <span class="contact-link">Whatsapp</span>
+            </a>
+            <a href="https://twitter.com/ritoboy6?t=PXXphiCTuhkpkE5T3bWO-Q&s=09" 
+                target="_blank">
+                <i class="fa" style="color: blue;">&#xf099</i>
+                <span class="contact-link">Twitter</span>
+            </a>
+            </div>
+        </div>
+
+        <div class = "greeting-msg" id="to-top"></div>
+
+        <!--Container for the whole page, it has a grid of 30%-70%-->
+        <div class="page-container">
+
+            <!--PERSONAL INFORMATION + PICTURE-->
+        <div class="personal-info-container">
+        <div class="my-picture">
+            <img src="Portfolio images\IMG_Portfolio 1.jpeg" alt="my picture"
+            style="width:100%; height:auto; object-fit: contain;">
+        </div>
+        <div class="little-intro">
+            I'm <span id="name">Emmanuel</span> <br> A Junior
+             FrontEnd Developer. <br> 
+            <span id="intro">
+                Passionately acquiring knowledge to improve the tech world 
+                either as a team member or not. Building Something From Nothing.
+            </span>
+            <div class="contact-address">
+                <p><i class="fa">&#xf098</i>+234 81 427 019 52</p>
+                <p><i class="fa">&#xf2b6</i>ritoboy4@gmail.com</p>
+                <p><i class="fa">&#xf0c1</i>github.com/Ritoboy</p>
+                <p><i class="fa">&#xf041;</i>Lagos state, Nigeria</p>
+            </div>
+        </div>
+
+        <!--Accordion-->
+        <!--<div class="accordion-container">
+            <div id="accordion-heading">Here are my home-works -
+                <i class="material-icons"></i>
+            </div>
+        <div class="link-container">
+            <div class="link">
+                Curriculum Vitae- C.V
+            </div>
+                <div class="link-content">
+                    For the Lord's goodness and mercy<br>
+                    endureth forever and ever. Blessed be God <br>
+                    father of our Lord Jesus Christ who has <br>
+                    blessed us with all spiritual blessings.<br>
+                    Amen.
+                </div>
+        </div>
+        <div class="link-container">
+            <div class="link">
+                Web Development Projects
+            </div>
+                <div class="link-content">
+                    For the Lord's goodness and mercy<br>
+                    endureth forever and ever. Blessed be God <br>
+                    father of our Lord Jesus Christ who has <br>
+                    blessed us with all spiritual blessings.<br>
+                    Amen.
+                </div>
+        </div>
+        <div class="link-container">
+            <div class="link">
+                Graphics Designs
+            </div>
+                <div class="link-content">
+                    For the Lord's goodness and mercy<br>
+                    endureth forever and ever. Blessed be God <br>
+                    father of our Lord Jesus Christ who has <br>
+                    blessed us with all spiritual blessings.<br>
+                    Amen.
+                </div>
+        </div>
+        </div>-->
+
+        </div>
+
+            <!--PORTFOLIO CONTAINER for the C.V, Web design & Graphics design-->
+    <div class="portfolio-container">
+
+        <!--PORTFOLIO MAIN PAGE to display the image and link to each content-->
+        <div class="portfolio">
+
+            <div class="portfolio-content">
+                <!--CV container on main page-->
+            <div class="box-container cv">
+                <div class="box">
+                    <img src="Portfolio images\c.v-images\cv img1.jpg"
+                    alt="porfolio image" style="width:100%; height: 100%;
+                    object-fit: cover;">
+                </div>
+                <a href="#" class="box-small  cv-link page"
+                onclick="cvPage()">Curriculum Vitae - C.V</a>
+            </div>
+            <!--Web Design container on main page-->
+            <div class="box-container web-design">
+                <div class="box">
+                    <img src="Portfolio images\web-design-images\web img1.jpg"
+                    alt="web design image" style="width:100%; height: 100%;
+                    object-fit: cover;">
+                </div>
+                <a href="#" class="box-small  web-design-link page" 
+                onclick="webDesignPage()">Web development</a>
+            </div>
+            <!--Graphics Design container on main page-->
+            <div class="box-container graphics-design">
+                <div class="box">
+                    <img src="Portfolio images\Photoshop-images\Sweet FY flier 6a.jpg"
+                    alt="graphics design image" style="width:100%; height: 100%;
+                    object-fit: cover;">
+                </div>
+                <a href="#" class="box-small graphics-design-link page"
+                onclick="graphicsDesignPage()">Graphics design</a>
+            </div>
+            </div>
+        </div>
+
+        <!--DESIGN FOR C.V PAGE-->
+        <div class="cv-container">
+            <div class="cv-header">
+                <div class="return-main-page-link"
+                onclick="returnHome()"><i class="fa">&#xf00d</i>
+            </div>
+                <span>My Curriculum Vitae - C.V</span>
+            </div>
+            <div class="cv-content">
+            <div class="skill-container cv-box">
+                <span class="title">Skills</span>
+                <p>HTML</p>
+                <div class="skill">
+                    <div class="html">
+                        90%
+                    </div>
+                </div>
+                <p>CSS</p>
+                <div class="skill">
+                    <div class="css">
+                        90%
+                    </div>
+                </div>
+                <p>Javascript</p>
+                <div class="skill">
+                    <div class="javascript">
+                        80%
+                    </div>
+                </div>
+                <p>Git & Github</p>
+                <div class="skill">
+                    <div class="git">
+                        90%
+                    </div>
+                </div>
+                <p>Adobe Photoshop</p>
+                <div class="skill">
+                    <div class="adobe">
+                        90%
+                    </div>
+                </div>
+                <p>Corel draw</p>
+                <div class="skill">
+                    <div class="corel-draw">
+                        90%
+                    </div>
+                </div>
+            </div>
+            <div class="work-experience cv-box">
+                <span class="title">Work experience</span>
+                <dl>
+                <dt>Graphics designer</dt>
+                <dd>- Christ Intelligent Army <br> 
+                    <div>2021 - 2022</div>
+                </dd>
+                <dd>- Sweet_FY Pastries <br>
+                    <div>2023 - <span>Present</span></div>
+                </dd>
+                </dl>
+                <dl>
+                    <dt>Web developer</dt>
+                    <dd>- Hopefully, i get to start with your priviledge
+                    <div>Now - <span>Future</span></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="education cv-box">
+                <span class="title">Education & Language</span>
+                <dl>
+                    <dt>University Of Ilorin, Nigeria</dt>
+                    <dd>- Bachelor degree in Chemistry & Education
+                    <div>2018 - 2023</div>
+                    </dd>
+                </dl>
+                <span class="title language">Language</span>
+                <p>English</p>
+                <div class="lang">
+                    <div class="english">
+                        100%
+                    </div>
+                </div>
+                <p>Yoruba</p>
+                <div class="lang">
+                    <div class="yoruba">
+                        100%
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--DESIGN FOR WEB DESIGN PAGE-->
+            <div class="web-design-container">
+                <div class="web-design-header">
+                    <div class="return-main-page-link"
+                    onclick="returnHome()"><i class="fa">&#xf00d</i>
+                </div>
+                    <span>Web Development Projects</span>
+                </div>
+            <div class="business-design-content">
+                <h2>Online shopping website -</h2>
+                <!--WEBSITE CARD 1-->
+                <div class="card-container">
+                    <div class="card-header">
+                        <h3>Online Sales shop</h3>
+                    </div>
+                <div class="card">
+                    <img src="Portfolio images\web-design-images\Screenshot (22).png" 
+                    alt="shoping website image"
+                    style="width: 100%; height: 80%; object-fit: cover;">
+                    <a href="Online sales project\Home page.html" class="go-to-web-link"
+                    target="_blank">View Website</a>
+                </div>
+                </div>
+                
+            </div>
+            
+            <div class="game-content">
+                <h2>Games -</h2>
+                <!--GAME CARD 1-->
+            <div class="card-container">
+                    <div class="card-header">
+                        <h3>Electronics shop</h3>
+                    </div>
+                <div class="card">
+                    <img src="Portfolio images\web-design-images\web img3.jpg" alt="shoping website image"
+                    style="width: 100%; height: 80%; object-fit: cover;">
+                    <a href="#" class="go-to-web-link">View Website</a>
+                </div>
+                </div>
+                <!--GAME CARD 2-->
+                <div class="card-container">
+                    <div class="card-header">
+                        <h3>Electronics shop</h3>
+                    </div>
+                <div class="card">
+                    <img src="Portfolio images\web-design-images\web img3.jpg" alt="shoping website image"
+                    style="width: 100%; height: 80%; object-fit: cover;">
+                    <a href="#" class="go-to-web-link">View Website</a>
+                </div>
+                </div>
+                
+            </div>
+            </div>
+
+        <!--DESIGN FOR GRAPHICS DESIGN PAGE-->
+        <div class="graphics-design-container">
+            <div class="graphics-design-header">
+                <div class="return-main-page-link"
+                onclick="returnHome()"><i class="fa">&#xf00d</i>
+            </div>
+                <span>Graphics Design Projects</span>
+            </div>
+            
+            <!--COREL DRAW IMAGES-->
+            <div class="display-container">
+                <h2>Corel Draw designs -</h2>
+                <div class="corel-display">
+                    <img src="Portfolio images/Corel-draw-images/T-zerz 1.jpg"
+                alt="salon-flier" style="width: 100%; height: 100%; object-fit: cover;"
+                id ="showImg-cd">
+                </div>
+            </div>
+            <div class="image-columns">
+                <div class="image-box">
+            <img src="Portfolio images\Corel-draw-images\T-zerz 1.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayCd(this);">
+                </div>
+                <div class="image-box">
+            <img src="Portfolio images\Corel-draw-images\logoo.png"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayCd(this);">
+                        </div>
+                <div class="image-box">
+            <img src="Portfolio images\Corel-draw-images\CIA cca.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayCd(this);">
+                </div>
+                <div class="image-box">
+            <img src="Portfolio images\Corel-draw-images\logoo.png"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayCd(this);">
+                </div>
+                <div class="image-box">
+            <img src="Portfolio images\Corel-draw-images\CIA cca.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayCd(this);">
+                </div>
+            </div>
+
+            <!--PHOTOSHOP IMAGES-->
+            <div class="display-container" style="margin-top: 60px;">
+                <h2>Adobe Photoshop designs -</h2>
+                <div class="photoshop-display">
+                    <img src="Portfolio images/Photoshop-images/Mera salon 2.jpg"
+                alt="salon-flier" style="width: 100%; height: 100%; object-fit: cover;"
+                id="showImg-ps">
+                </div>
+            </div>
+            <div class="image-columns" style="margin-bottom: 40px;">
+                <div class="image-box">
+            <img src="Portfolio images\Photoshop-images\Program 2-min.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayPs(this);">
+                </div>
+                <div class="image-box">
+            <img src="Portfolio images\Photoshop-images\Mera salon 1.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayPs(this);">
+                        </div>
+                <div class="image-box">
+            <img src="Portfolio images\Photoshop-images\Mitchell.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayPs(this);">
+                </div>
+                <div class="image-box">
+            <img src="Portfolio images\Photoshop-images\Gb'ona ara Program flier.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayPs(this);">
+                </div>
+                <div class="image-box">
+            <img src="Portfolio images\Photoshop-images\Sweet FY flier 6a.jpg"
+            alt="program flier" style="width: 100%; height: 100%; object-fit: cover;"
+            onclick="displayPs(this);">
+                </div>
+            </div>
+              
+        </div>
+    </div>
+        </div>
+
+        <div class="back-to-top" title="to top" onclick="up()">
+                    <i class="fa">&#xf0aa</i>
+        </div>
+
+
+        <footer>
+            <p>
+                <i class="fa" 
+                style="font-size: 16px; margin: 4px 0px;">&#xe90c</i>
+                Ritoboy_2024
+            </p>
+        </footer>
+
+    <script src="Portfolio 1.js"></script>
+    </body>
+</html>

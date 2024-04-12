@@ -1,0 +1,855 @@
+* {box-sizing: border-box;}
+
+body {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 0px;
+    margin: 0;
+}
+
+.page-container, .greeting-msg {
+    width: 100%;
+    height:100%;
+    text-align: center;
+    display: block;
+    margin: 0px;
+}
+
+/*HEADER*/
+.header {
+    display: block;
+    background-color: black;
+    height: 40px;
+    width: 100%;
+    margin: 0px;
+    padding: auto 0px;
+    border-bottom: 3px solid rgb(222, 184, 135);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+/*HEADER NAVICON*/
+.navicon-container {
+    width: 30px;
+    display: block;
+    float: left;
+}
+.navicon {
+    width: 100%;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.navicon i {
+    display: block;
+    padding: 4px;
+    margin: auto 4px;
+}
+.navicon-content {
+    display: none;
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: white;
+    z-index: 1;
+}
+.navicon-content a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 12px 12px;
+    margin: 0;
+    border-bottom: 1px solid rgb(222, 184, 135);
+}
+.navicon-content a:hover {
+    background-color: rgb(222, 184, 135);
+}
+.navicon-container .navicon.active .navicon-content {
+    display: block;
+}
+
+/*HEADER USERNAME*/
+#username {
+    width: 35%;
+    float: left;
+    margin: 10px 0px 0px 10px;
+    padding: auto 0px;
+    color: rgb(156, 156, 156);
+    display: block;
+    font-size: small;
+}
+
+/*HEADER CONTACT LINKS*/
+.top-contact-container {
+    display: block;
+    width: 50%;
+    float: right;
+    padding: auto;
+    margin-right: 2%;
+    margin-top: 10px;
+}
+.top-contact-container i {
+    display: block;
+    float: right;
+    font-size: small;
+    text-decoration: none;
+    background-color: white;
+    padding: 4px;
+    margin: auto 5px;
+    border-radius: 50%;
+}
+.top-contact-container i:hover {
+    background-color: rgb(222, 184, 135);
+}
+.contact-link {
+    display: none;
+}
+.contact-link:hover {
+    background-color: white;
+    color: black;
+}
+/*END OF HEADER*/
+
+/*PERSONAL INFORMATION*/
+.personal-info-container {
+    text-align: center;
+    display: block;
+        background-color: black;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 12px 16px;
+}
+.greeting-msg {
+    display: inline-block;
+    padding: 0;
+    font-size: 2em;
+    margin: 20px 0;
+    width:100%;
+}
+.my-picture {
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 5px dashed rgb(222, 184, 135);
+    overflow: hidden;
+    height:22em;
+    width: 70%;
+    padding: auto;
+}
+.little-intro {
+    margin-top: 15px;
+    font-size: 2em;
+    height: auto;
+    display: inline-block;
+}
+#intro {
+    color: rgb(156, 156, 156);
+    display: inline-block;
+    font-size: 20px;
+    width: 80%;
+    margin-top: 10px;
+    line-height: 28px;
+}
+#name {
+    color: rgb(222, 184, 135);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.contact-address {
+    /*display: none;*/
+    line-height: 12px;
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.contact-address i {
+    color: burlywood;
+    margin-right: 8px;
+}
+
+/*ACCORDION*/
+.accordion-container {
+    display: block;
+    border: 1px solid white;
+    border-radius:0 24px 0 24px;
+    padding: 20px 15px;
+    height: auto;
+    width: 80%;
+    margin: 3em auto;
+}
+#accordion-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgb(222, 184, 135);
+}
+.link {
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    padding: 16px;
+    text-align: left;
+    font-size: 20px;
+    border-radius:0 24px 0 24px;
+    position: relative;
+    transition: .8s;
+}
+.link:hover {
+    background-color: rgb(222, 184, 135);
+    cursor: pointer;
+}
+.link::after {
+    content: "+";
+    position: absolute;
+    right: 15px;
+}
+.link-content {
+    height: 0;
+    overflow: hidden;
+    transition: .8s;
+}
+.link-container.active .link-content {
+    height: 100px;
+    transition: .8s;
+}
+.link-container.active .link {
+    font-size: 16px;
+    transition: .8s;
+    border-radius: 0px;
+}
+.link-container.active .link::after {
+    content: "-";
+}
+/*END OF ACCORDION*/
+
+.back-to-top {
+    display: none;
+    cursor: pointer;
+}
+.back-to-top i {
+    color: black;
+    padding: 4px;
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(222, 184, 135);
+    z-index: 99;
+}
+.back-to-top i:hover {
+    background-color: white;
+}
+.box-container {
+    display: none;
+}
+
+
+/*BOXES TO SHOW LINK TO EACH PROJECT*/
+.portfolio-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.portfolio {
+    width: 100%;
+    height: 100%;
+}
+.portfolio-content {
+    width:100%;
+    text-align: center;
+    display: block;
+    height: 100%;
+}
+.box-container {
+    display: block;
+    height: auto;
+}
+.box {
+    display: none;
+    width: 100%;
+    height: 15em;
+    background-color: white;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+.box img {
+    border-radius: 12px;
+}
+.box-small {
+    display: block;
+    position: relative;
+    background-color: white;
+    text-align: center;
+    border-radius:0 24px 0 24px;
+    padding: 12px 16px;
+    margin: 20px auto;
+    color: black;
+    text-decoration: none;
+    width: 60%;
+    box-shadow: 0px 2px 4px 0px rgba(224, 214, 165, 0.5);
+}
+.box-small:hover {
+    background-color:rgb(222, 184, 135);
+}
+/*END*/
+
+.web-design-container, .graphics-design-container, .cv-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.web-design-header, .graphics-design-header, .cv-header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    position: sticky;
+    top: 40px;
+    padding: 12px 0;
+}
+.return-main-page-link {
+    float: left;
+    color: rgb(219, 218, 218);
+    padding: 2px 8px;
+    margin-left: 15px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px 0px rgba(48, 45, 45, 0.9);
+}
+.return-main-page-link:hover {
+    background-color: rgb(222, 184, 135);
+    color: black;
+    cursor: pointer;
+}
+
+/*C.V PROJECT*/
+.cv-content {
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+.cv-box {
+    text-align: left;
+    width: 70%;
+    height: 420px;
+    padding: 16px 16px;
+    margin: 32px auto;
+    background-color: white;
+    color: black;
+    border-radius: 16px;
+    box-shadow: 2px 2px 3px rgb(222, 184, 135);
+}
+.skill, .lang {
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+.html, .css, .javascript, .adobe, .git, .corel-draw, .yoruba, .english {
+    width: 90%;
+    background-color: rgb(222, 184, 135);
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: black;
+    font-size: small;
+    text-align: right;
+}
+.css {
+    width: 90%;
+}
+.javascript {
+    width: 80%;
+}
+.adobe {
+    width: 90%;
+}
+.git {
+    width: 90%;
+}
+.corel-draw {
+    width: 90%;
+}
+.cv-box p {
+    margin: 2px;
+}
+.english, .yoruba {
+    width: 100%;
+}
+
+.title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(65, 32, 8);
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgb(65, 32, 8);
+}
+dt {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+dd {
+    color: rgb(65, 32, 8);
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+dd div {
+    font-weight: normal;
+}
+dd span {
+    background-color: rgb(65, 32, 8);
+    color: white;
+    padding: 0px 6px;
+    border-radius: 4px;
+}
+.language {
+    margin-top: 40px;
+}
+
+/*WEB DESIGN PAGE CONTENT*/
+.business-design-content, .game-content {
+    display: grid;
+    grid-template-columns: 35% 32.5% 32.5%;
+    width:100%;
+    height: 20em;
+    border-bottom: 1px solid white;
+}
+.business-design-content h2, .game-content h2 {
+    font-size: 1.2em;
+    color: rgb(222, 184, 135);
+}
+.card-container {
+    width:90%;
+    height: 15em;
+}
+.card-container h3 {
+    font-size: 0.8em;
+    color: rgb(194, 194, 194);
+    background-color: black;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-shadow: 0px 2px 4px 0px rgba(224, 214, 165, 0.5);
+}
+
+/*.icon-next {
+    position: absolute;
+    top: 7.5em;
+    right: 3%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 16px 4px;
+    border: none;
+    color: white;
+}
+.icon-next {
+    position: absolute;
+    top: 7.5em;
+    left: 3%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 16px 4px;
+    border: none;
+    color: white;
+}*/
+.go-to-web-link {
+    display: inline-block;
+    text-align: center;
+    height: 20%;
+    text-decoration: none;
+    color: black;
+    padding: 16px 12px;
+    margin: 0;
+    background-color: rgb(222, 184, 135);
+    width: 100%;
+}
+.go-to-web-link:hover {
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px rgba(224, 214, 165, 0.5);
+}
+
+/*GRAPHICS DESIGN PAGE CONTENT*/
+.display-container {
+    width: 100%;
+    padding: 4%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin: 20px 0;
+}
+.display-container h2 {
+    color: rgb(222, 184, 135);
+}
+.corel-display, .photoshop-display {
+    width: 80%;
+    border: 1px solid rgb(222, 184, 135);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.photoshop-display img, .corel-display img {
+    border-radius: 8px;
+}
+.image-columns {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 150px;
+    display: flex;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.image-box {
+    width: 20%;
+    height: 100%;
+}
+.image-box:hover {
+    border: 2px solid rgb(222, 184, 135);
+    cursor: pointer;
+}
+
+/*FOOTER*/
+footer {
+    width:100%;
+    background-color: rgb(222, 184, 135);
+    padding: auto 0;
+    margin: 0;
+    height: 50px;
+    color: rgb(104, 101, 101);
+}
+footer p {
+    text-align: center;
+}
+/*END OF FOOTER*/
+
+/*ON BIG SCREEN*/
+@media (max-width:450px) {
+    .top-contact-container {
+        width: 45%;
+    }
+    #username {
+        display: block;
+        width: 40%;
+        font-size: 1em;
+        padding: auto;
+    }
+    #username span {
+        display: none;
+    }
+    .contact-address {
+        font-size: small;
+        margin: 20px auto;
+    } 
+    #intro {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .my-picture {
+        height: 16em;
+    }
+    .card-container {
+        height: 12em;
+    }
+    .go-to-web-link {
+        height: 20%;
+        padding: 4px 12px;
+        font-size: small;
+    }
+}
+
+@media (min-width:600px) {
+    #username {
+        width: 35%;
+        font-size: medium;
+    }
+    .my-picture {
+        width: 60%;
+        border: 1px solid white;
+        border-radius:0 24px 0 24px;
+        box-shadow: 0px 2px 4px 0px rgba(224, 214, 165, 0.5);
+    }
+    .contact-link {
+        font-size: 0.8em;
+        display: none;
+        padding: 2px 8px;
+        margin: 0 6px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 2px 0px rgba(48, 45, 45, 0.9);
+    }
+    .top-contact-container {
+        display: block;
+        width: 50%;
+        margin-right: 2%;
+    }
+    .portfolio-content {
+        width:100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    .box-container {
+        display: block;
+        width: 30%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .box {
+        display: block;
+        width: 100%;
+        height: 15em;
+        background-color: white;
+        border-radius: 12px;
+        margin: 20px 0;
+    }
+    .box img {
+        border-radius: 12px;
+    }
+    .box-small {
+        display: block;
+        position: relative;
+        background-color: white;
+        text-align: center;
+        border-radius: 12px;
+        padding: 12px 6px;
+        margin: 10px auto;
+        color: black;
+        text-decoration: none;
+        width: 100%;
+        box-shadow: 0px 2px 4px 0px rgba(224, 214, 165, 0.5);
+    }
+}
+
+@media (min-width:800px) {
+    .header {
+        display: block;
+        height: 40px;
+            width: 100%;
+            margin: 0px;
+            background-color: rgb(222, 184, 135);
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+    }
+    .navicon {
+        display: none;
+    }
+    #username {
+        float: left;
+        margin: 10px 10px;
+        font-weight: bold;
+        color: black;
+        display: block;
+    }
+    .top-contact-container {
+        display: block;
+        width: 60%;
+        float: right;
+        padding: auto;
+        margin: 10px 0;
+        margin-right: 2%;
+    }
+    .top-contact-container a {
+        display: inline-block;
+        text-decoration: none;
+        margin: auto 6px;
+    }
+    .top-contact-container i {
+        display: inline-block;
+        float: none;
+        font-size: medium;
+        background-color: transparent;
+        padding: 1px;
+        margin: 0px;
+    }
+    .contact-link {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 2px 8px;
+        margin: 0 1px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 2px 0px rgba(48, 45, 45, 0.9);
+    }
+    .personal-info-container {
+        height: 800px;
+        position: sticky;
+        top: 40px;
+        padding: 0px;
+    }
+    .my-picture {
+        margin: 0;
+        margin-bottom: 10px;
+        border: 0px;
+        border-radius: 0px;
+        border-bottom: 1px solid rgb(222, 184, 135);
+        overflow: hidden;
+        height:20em;
+        width: 100%;
+        padding: 0px;
+    }
+    .contact-address {
+        /*display: none;*/
+        line-height: 12px;
+        font-size: medium;
+        text-align: center;
+        width: 80%;
+        margin: 30px auto;
+    }
+    .little-intro {
+        width: 100%;
+        padding: auto 32px;
+    }
+
+    .greeting-msg {
+        display: none;
+    }
+    .page-container {
+        display: grid;
+        grid-template-columns: 33% 67%;
+        margin: 0px;
+    }
+    .accordion-container {
+        display: none;
+    }
+
+    /*BIG SCREEN RIGHT SECTION*/
+    .back-to-top {
+        display: none;
+    }
+    .portfolio-container {
+        border-left: 1px solid white;
+    }  
+    .portfolio-content {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box-container {
+        float: left;
+        margin: auto 2%;
+        display: block;
+        width: 30%;
+        height: auto;
+    }
+    .box {
+        display: block;
+    }
+    .box-small {
+        display: inline-block;
+        padding: 12px 8px;
+        background-color: rgb(222, 184, 135);
+        text-align: center;
+        border-radius: 8px;
+        color: black;
+        text-decoration: none;
+        width: 100%;
+        box-shadow: 0px 2px 4px 0px rgba(224, 214, 165, 0.5);
+    }
+    .box-small:hover {
+        background-color:rgb(255, 255, 255);
+    }
+    .web-design-header, .graphics-design-header, .cv-header {
+        top: 40px;
+    }
+
+    /*FOR CV*/
+    .cv-content {
+        width: 100%;
+        height: 80%;
+        display: block;
+    }
+    .cv-box {
+        display: block;
+        width: 70%;
+        margin: 16px auto;
+    }
+
+    /*WEB DEVELOPMENT PROJECT*/
+    .business-design-content, .game-content {
+        height: 25em;
+        display: grid;
+        grid-template-columns: 35% 32.5% 32.5%;
+    }
+    .business-design-content h2, .game-content h2 {
+        font-size: 1.5em;
+        color: rgb(222, 184, 135);
+    } 
+    .card-container h3 {
+        font-size: 1.2em;
+    }
+    
+    /*GRAPHICS DESIGN PROJECT*/
+    .display-container {
+        padding: 0px;
+    }
+    .photoshop-display, .corel-display {
+        width: 60%;
+    }
+    .image-columns {
+        height: 200px;
+    }
+
+}
+
+@media (min-width:1000px) {
+    .my-picture {
+        margin: 20px auto;
+        border-radius: 50%;
+        border: 5px dashed rgb(222, 184, 135);
+        overflow: hidden;
+        height:18em;
+        width: 80%;
+        padding: auto;
+    }
+    .page-container {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin: 0px;
+    }
+    .box-container {
+        margin: auto 2%;
+        display: block;
+        width: 30%;
+        height: auto;
+    }
+    .contact-address {
+        line-height: 12px;
+        font-size: large;
+        text-align: center;
+        width: 80%;
+        margin: 30px auto;
+    }
+    .cv-content {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0px;
+    }
+    .cv-box {
+        width: 30%;
+    }
+}
+
+@media (min-width:1200px) {
+    .my-picture {
+        height: 22em;
+    }
+    .box-container {
+        float: left;
+        margin: auto 3%;
+        display: block;
+        width: 25%;
+        height: auto;
+    }
+}
