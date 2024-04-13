@@ -5,6 +5,9 @@ const leftSection = document.querySelector('.personal-info-container');
 const cvDesign = document.querySelector('.cv-container');
 const webDesign = document.querySelector('.web-design-container');
 const graphicsDesign = document.querySelector('.graphics-design-container');
+const webProject = document.querySelector('.web-project-content');
+const gameProject = document.querySelector('.game-content');
+const quoteDesign = document.querySelector('.quote-project');
 
 
 function cvPage() {
@@ -13,14 +16,19 @@ function cvPage() {
 };
 function webDesignPage() {
     rightSection.style.display = 'none';
+    webProject.style.display = 'grid';
+    gameProject.style.display = 'grid';
+    quoteDesign.style.display = 'none';
     webDesign.style.display = 'block'; 
-    if (screen > 800) {
-        webDesign.style.display = 'flex';;
-    }
 };
 function graphicsDesignPage() {
     rightSection.style.display = 'none';
     graphicsDesign.style.display = 'block'; 
+};
+function quoteGen() {
+    webProject.style.display = 'none';
+    gameProject.style.display = 'none';
+    quoteDesign.style.display = 'block';
 };
 function returnHome() {
     cvDesign.style.display = 'none';
@@ -66,3 +74,22 @@ if (new Date().getHours() < 12) {
 } else {
     greetingMsg.innerHTML = 'Good evening Boss!';
 };
+
+/*QUOTE JS*/
+const quote = document.getElementById('quote');
+const author = document.getElementById('author');
+const btn = document.getElementById('quote-btn');
+
+const url = "https://api.quotable.io/random";
+
+let getQuote = () => {
+    fetch(url)
+    .then((data) => data.json())
+    .then((item) => {
+        quote.innerText = item.content;
+        author.innerText = item.author;
+    });
+};
+
+btn.addEventListener('click', getQuote);
+
